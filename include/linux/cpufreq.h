@@ -439,9 +439,9 @@ extern struct cpufreq_governor cpufreq_gov_bioshock;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_LIONFISH)
 extern struct cpufreq_governor cpufreq_gov_lionfish;
 #define CPUFREQ_DEFAULT_GOVERNOR       (&cpufreq_gov_lionfish)
-#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_XPERIENCE)
-extern struct cpufreq_governor cpufreq_gov_xperience;
-#define CPUFREQ_DEFAULT_GOVERNOR 	(&cpufreq_gov_xperience)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SMARTASS2)
+extern struct cpufreq_governor cpufreq_gov_smartass2;
+#define CPUFREQ_DEFAULT_GOVERNOR 	(&cpufreq_gov_smartass2)
 #endif
 
 /*********************************************************************

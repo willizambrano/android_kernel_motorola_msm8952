@@ -12,7 +12,7 @@ nocol='\033[0m'
 echo -e "Borrando basura"
 make clean && make mrproper
 
-export CROSS_COMPILE=/home/william/linaro6.3/bin/arm-eabi-
+export CROSS_COMPILE=/home/william/linaro5.2/bin/arm-eabi-
 export ARCH=arm
 export KBUILD_BUILD_USER="WilliamZambrano"
 export KBUILD_BUILD_HOST="AMDfx6300"
@@ -23,9 +23,9 @@ echo -e "$yellow*****************************************************"
 echo "       Compilando Evolution_Kernel         "
 echo -e "*****************************************************$nocol"
 
-make -j6 zImage CONFIG_DEBUG_SECTION_MISMATCH=y CONFIG_NO_ERROR_ON_MISMATCH=y
-make -j6 zImage-dtb CONFIG_DEBUG_SECTION_MISMATCH=y CONFIG_NO_ERROR_ON_MISMATCH=y
-make -j6 modules CONFIG_DEBUG_SECTION_MISMATCH=y CONFIG_NO_ERROR_ON_MISMATCH=y
+make -o3 -j6 zImage
+make -o3 -j6 dtimage
+make -j6 modules
 make -j6 modules_install INSTALL_MOD_PATH=evolution_install INSTALL_MOD_STRIP=1
 
 BUILD_END=$(date +"%s")

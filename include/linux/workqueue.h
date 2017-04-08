@@ -368,7 +368,6 @@ enum {
  * system_power_efficient_wq is identical to system_wq if
  * 'wq_power_efficient' is disabled.  See WQ_POWER_EFFICIENT for more info.
  */
- */
 extern struct workqueue_struct *system_wq;
 extern struct workqueue_struct *system_long_wq;
 extern struct workqueue_struct *system_unbound_wq;
@@ -651,3 +650,4 @@ static inline int workqueue_sysfs_register(struct workqueue_struct *wq)
 #endif	/* CONFIG_SYSFS */
 
 #endif
+
